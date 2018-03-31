@@ -1,0 +1,19 @@
+Package: uscolleges
+Type: Package
+Title: Tidy US College Scorecard Data
+Version: 0.1.0
+Authors@R: as.person("Jon Harmon <jonthegeek@gmail.com> [aut, cre]")
+Description: A tidy version of the most recent College Scorecards 
+    from the US Department of Education.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.4.1)
+Suggests: dplyr, 
+    purrr, 
+    readr, 
+    readxl,
+    rlang, 
+    stringr, 
+    tidyr
+RoxygenNote: 6.0.1

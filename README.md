@@ -13,6 +13,12 @@ devtools::install_github("jonthegeek/uscolleges")
 
 ``` r
 # Warning: This data.frame contains 7,593 observations of 622 variables.
-ggplot2::ggplot(uscolleges::uscolleges) + ggplot2::aes(x = location.lon, y = location.lat) + ggplot2::geom_point()
+library(dplyr)
+library(ggplot2)
+uscolleges::uscolleges %>% 
+  filter(location.lon > -130, location.lon < 0, location.lat > 20) %>% 
+  ggplot() + 
+    aes(x = location.lon, y = location.lat) + 
+    geom_point()
 ```
 

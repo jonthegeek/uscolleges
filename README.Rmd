@@ -1,12 +1,22 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-uscolleges
-==========
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# uscolleges
 
 The uscolleges package provides a tidy version of the most recent College Scorecards from the US Department of Education.
 
-Installation
-------------
+## Installation
 
 You can install the development version from [GitHub](https://github.com/) with:
 
@@ -14,11 +24,9 @@ You can install the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("jonthegeek/uscolleges")
 ```
+## Example
 
-Example
--------
-
-``` r
+```{r example, message=FALSE, warning=FALSE}
 library(dplyr)
 library(ggplot2)
 uscolleges::uscolleges %>% 
@@ -27,5 +35,3 @@ uscolleges::uscolleges %>%
     aes(x = location.lon, y = location.lat) + 
     geom_point()
 ```
-
-<img src="man/figures/README-example-1.png" width="100%" />
